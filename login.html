@@ -1,0 +1,72 @@
+<nav>
+  <a href="index.html">Home</a>
+  <a href="explore.html">Explore</a>
+  <a href="create.html">Create</a>
+  <a href="fundraiser.html">Fundraiser</a>
+  <a href="donate.html">Donate</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</nav>
+
+<a href="signup.html">Create an account</a>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MoneyLoop – Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{--primary:#02a95c;--dark:#1a1a1a;--light:#f7f7f7;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:Arial,sans-serif;background:var(--light);color:var(--dark);}
+    header{background:#fff;padding:1rem 2rem;border-bottom:1px solid #ddd;}
+    nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;}
+    .logo{font-size:1.4rem;font-weight:bold;color:var(--primary);}
+    .nav-links a{margin-left:1.5rem;text-decoration:none;color:var(--dark);font-size:0.95rem;}
+    .container{max-width:400px;margin:3rem auto;padding:2rem;background:#fff;border-radius:12px;border:1px solid #ddd;text-align:center;}
+    h1{font-size:1.8rem;margin-bottom:1rem;}
+    label{display:block;margin-top:1rem;margin-bottom:0.3rem;font-size:0.95rem;text-align:left;}
+    input{width:100%;padding:0.7rem;border-radius:6px;border:1px solid #ccc;font-size:0.95rem;}
+    button{margin-top:1.5rem;width:100%;background:var(--primary);color:#fff;padding:0.8rem;border:none;border-radius:6px;font-size:1rem;font-weight:bold;cursor:pointer;}
+    .link{margin-top:1rem;font-size:0.9rem;}
+    .link a{text-decoration:none;color:var(--primary);}
+    footer{background:#fff;padding:2rem;margin-top:3rem;border-top:1px solid #ddd;text-align:center;font-size:0.9rem;color:#555;}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">MoneyLoop</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Login</h1>
+  <p>Access your MoneyLoop dashboard.</p>
+
+  <label>Email</label>
+  <input type="email" placeholder="you@example.com">
+
+  <label>Password</label>
+  <input type="password" placeholder="••••••••">
+
+  <button onclick="window.location.href='dashboard.html'">Login</button>
+
+  <div class="link">
+    Don’t have an account? <a href="signup.html">Sign up</a>
+  </div>
+</div>
+
+<footer>
+  © <span id="year"></span> MoneyLoop — Empowering Community Giving
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
