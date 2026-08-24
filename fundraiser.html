@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MoneyLoop – Fundraiser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #02a95c;
+      --dark: #1a1a1a;
+      --light: #f7f7f7;
+      --accent: #ffb400;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.95rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 320px;
+      background: #ccc url('https://via.placeholder.com/1200x320') center/cover no-repeat;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    /* LEFT SIDE */
+    .fundraiser-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .fundraiser-meta {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress {
+      background: #eee;
+      height: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--primary);
+      width: 72%;
+    }
+
+    .amount {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .story {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-top: 2rem;
+    }
+    .story h2 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .story p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    /* RIGHT SIDE */
+    .donate-box {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+    .donate-box h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .donate-box input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .donate-box button {
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #fff;
+      padding: 2rem;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">MoneyLoop</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="create.html">Start a Fundraiser</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero-img"></div>
+
+  <div class="container">
+    <!-- LEFT -->
+    <div>
+      <h1 class="fundraiser-title">Support Liam’s Recovery</h1>
+      <p class="fundraiser-meta">Medical • Organised by Sarah</p>
+
+      <div class="progress"><div class="progress-fill"></div></div>
+      <p class="amount">£7,200 raised of £10,000</p>
+
+      <div class="story">
+        <h2>Story</h2>
+        <p>Liam was recently involved in a serious accident and is now undergoing long-term rehabilitation. His family and friends are raising funds to support medical costs, therapy sessions, and essential recovery equipment.</p>
+
+        <p>Your support will help Liam access the care he needs and ease the financial pressure on his family during this difficult time.</p>
+
+        <p>Every donation, no matter the size, makes a real difference.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <div class="donate-box">
+        <h3>Donate to this fundraiser</h3>
+        <input type="number" placeholder="Enter amount (£)">
+        <button onclick="window.location.href='donate.html'">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> MoneyLoop — Empowering Community Giving
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
